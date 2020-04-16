@@ -9,6 +9,7 @@ eureka:
 zuul:  routes:    simpleAcount: #routing Id
       path: ${zuul.routes.simpleAccount.path} #zuul context root
       serviceId: ${zuul.routes.simpleAccount.serviceId} #spring application name
+      
     simpleMember:
       path: ${zuul.routes.simpleMember.path} #zuul context root
       serviceId: ${zuul.routes.simpleMember.serviceId} #spring application name
