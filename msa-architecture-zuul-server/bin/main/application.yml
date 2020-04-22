@@ -5,10 +5,20 @@ eureka:
   client:
     service-url:
       defaultZone: ${eureka.client.service-url.defaultZone}
-#Zuul Routing
 zuul:  routes:    simpleAcount: #routing Id
       path: ${zuul.routes.simpleAccount.path} #zuul context root
-      serviceId: ${zuul.routes.simpleAccount.serviceId} #spring application name
+      service-id: ${zuul.routes.simpleAccount.serviceId} #spring application name
     simpleMember:
       path: ${zuul.routes.simpleMember.path} #zuul context root
-      serviceId: ${zuul.routes.simpleMember.serviceId} #spring application name
+      service-id: ${zuul.routes.simpleMember.serviceId} #spring application name
+ribbon:
+  ReadTimeout: 3000
+  ConnectTimeout: 1000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            # Ribbon의 각 timeout보다 커야 기대하는대로 동작함
+            timeoutInMilliseconds: 5000   

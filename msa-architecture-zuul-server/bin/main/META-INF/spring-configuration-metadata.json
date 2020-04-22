@@ -1,0 +1,42 @@
+{"properties": [
+    {
+      "name": "ribbon.ReadTimeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "ribbon.ConnectTimeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "name": "hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds",
+      "type": "java.lang.Integer"
+    }
+ ],"hints": [
+    {
+        "name": "ribbon.ReadTimeout",
+        "values": [
+            {
+                "value": "integer",
+                "description": "ribbon ReadTimeout."
+            }
+        ]
+    },
+    {
+        "name": "ribbon.ConnectTimeout",
+        "values": [
+            {
+                "value": "integer",
+                "description": "ribbon ConnectTimeout."
+            }
+        ]
+    },
+    {
+        "name": "hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds",
+        "values": [
+            {
+                "value": "integer",
+                "description": "default timeoutInMilliseconds"
+            }
+        ]
+    }
+]}
