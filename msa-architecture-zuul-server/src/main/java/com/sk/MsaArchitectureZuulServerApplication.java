@@ -14,7 +14,7 @@ public class MsaArchitectureZuulServerApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MsaArchitectureZuulServerApplication.class, args);
 	}
-	
+
 	@Bean
 	public SimpleFilter simpleFilter() {
 		return new SimpleFilter();
