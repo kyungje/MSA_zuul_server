@@ -18,5 +18,6 @@ public class MsaArchitectureZuulServerApplication {
 	@Bean
 	public SimpleFilter simpleFilter() {
 		return new SimpleFilter();
+
 	}
 }
